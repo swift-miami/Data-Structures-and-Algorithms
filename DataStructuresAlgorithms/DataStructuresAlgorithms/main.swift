@@ -1,5 +1,9 @@
 import Foundation
 
+
+// MARK: - Data Structure
+
+// test .pop
 func testPop() {
     var heap = Heap<Int>()
     heap.insert(value: 10)
@@ -55,6 +59,18 @@ func testPop() {
     print("\(heap)\n\n")
 }
 
-//testPop()
 
+
+// MARK: - Algorithms
+
+// test Heap.findNthSmallest
+let values = [3, 10, 18, 5, 21, 100]
+let findNthSmallestResult = Heap.findNthSmallest(n: 3, in: values)
+assert(findNthSmallestResult == 10)
+
+
+// test is array a heap
+let array = [10, 30, 15, 40, 52, 100, 41, 42, 51]
+let isArrayAHeapResult = Heap.isMinHeap(array: array)
+assert(isArrayAHeapResult == true)
 

@@ -47,48 +47,20 @@ struct Heap<T: Comparable> {
     
     private var elements: [T] = []
     
+    init(with array: [T] = []) {
+        for element in array {
+            insert(value: element)
+        }
+    }
+
+    var asArray: [T] { return elements }
+
     var count: Int {
         return elements.count
     }
-    
+
     func peek() -> T? {
         return elements.first
-    }
-    
-    // Left child index of parent at index
-    private func leftChildIndex(for parentIndex: Int) -> Int? {
-        
-        // The left child of this node can be found at index 2i + 1
-        let leftIndex = (2 * parentIndex) + 1
-        
-        // Prevent index overflow
-        guard leftIndex < elements.count else { return nil }
-        
-        return leftIndex
-    }
-    
-    // Right child index of parent at index
-    private func rightChildIndex(for parentIndex: Int) -> Int? {
-        
-        // The right child of this node can be found at index 2i + 2
-        let rightIndex = (2 * parentIndex) + 2
-        
-        // Prevent index overflow
-        guard rightIndex < elements.count else { return nil }
-        
-        return rightIndex
-    }
-    
-    // Parent index given a children index
-    private func parentIndex(at childIndex: Int) -> Int? {
-        
-        // Given a node at index i, it's parent node can be found at index:
-        let parentIndex = (childIndex - 1) / 2
-        
-        // Prevent index overflow
-        guard parentIndex < elements.count else { return nil }
-        
-        return parentIndex
     }
     
     mutating func insert(value: T) {
@@ -139,6 +111,46 @@ struct Heap<T: Comparable> {
         
         return firstValue
     }
+}
+
+extension Heap {
+
+    // Left child index of parent at index
+    private func leftChildIndex(for parentIndex: Int) -> Int? {
+
+        // The left child of this node can be found at index 2i + 1
+        let leftIndex = (2 * parentIndex) + 1
+
+        // Prevent index overflow
+        guard leftIndex < elements.count else { return nil }
+
+        return leftIndex
+    }
+
+    // Right child index of parent at index
+    private func rightChildIndex(for parentIndex: Int) -> Int? {
+
+        // The right child of this node can be found at index 2i + 2
+        let rightIndex = (2 * parentIndex) + 2
+
+        // Prevent index overflow
+        guard rightIndex < elements.count else { return nil }
+
+        return rightIndex
+    }
+
+    // Parent index given a children index
+    private func parentIndex(at childIndex: Int) -> Int? {
+
+        // Given a node at index i, it's parent node can be found at index:
+        let parentIndex = (childIndex - 1) / 2
+
+        // Prevent index overflow
+        guard parentIndex < elements.count else { return nil }
+
+        return parentIndex
+    }
+
 }
 
 extension Heap: CustomStringConvertible {
