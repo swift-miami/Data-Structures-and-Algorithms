@@ -43,29 +43,12 @@
  https://www.raywenderlich.com/586-swift-algorithm-club-heap-and-priority-queue-data-structure
  */
 
-struct Heap<T: Comparable>: CustomStringConvertible {
+struct Heap<T: Comparable> {
     
     private var elements: [T] = []
     
     var count: Int {
         return elements.count
-    }
-    
-    var description: String {
-        
-        var lineNumber = 0
-        var lines: [[T]] = []
-        var limit = 1
-        for element in elements {
-            if lines[lineNumber].count == limit {
-                lines.append([])
-                lineNumber += 1
-                limit = limit * 2
-            }
-            lines[lineNumber].append(element)
-        }
-        
-        return "\(lines)"
     }
     
     func peek() -> T? {
@@ -153,5 +136,30 @@ struct Heap<T: Comparable>: CustomStringConvertible {
         bubbleDown(at: 0)
         
         return firstValue
+    }
+}
+
+extension Heap: CustomStringConvertible {
+    var description: String {
+        var lineNumber = 0
+        var lines: [[T]] = [[]]
+        var limit = 1
+        for element in elements {
+            if lines[lineNumber].count == limit {
+                lines.append([])
+                lineNumber += 1
+                limit = limit * 2
+            }
+            lines[lineNumber].append(element)
+        }
+
+        return lines
+            .enumerated()
+            .map { index, next in
+                var line = "\(index + 1): "
+                line += "\(next.map { "\($0)" }.joined(separator: ", "))"
+                return line
+            }
+            .joined(separator: "\n")
     }
 }
