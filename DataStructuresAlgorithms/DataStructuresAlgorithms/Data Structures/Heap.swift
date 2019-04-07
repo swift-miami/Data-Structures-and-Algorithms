@@ -113,7 +113,9 @@ struct Heap<T: Comparable> {
     mutating func pop() -> T? {
         let firstValue = elements.first
         
+        guard elements.count > 0 else { return nil }
         let lastIndex = elements.count - 1
+
         elements.swapAt(0, lastIndex)
         elements.remove(at: lastIndex)
         
@@ -122,7 +124,7 @@ struct Heap<T: Comparable> {
             guard let leftIndex = leftChildIndex(for: index) else { return }
             
             if let rightIndex = rightChildIndex(for: index),
-                elements[rightIndex] > elements[leftIndex] {
+                elements[rightIndex] < elements[leftIndex] {
                 
                 elements.swapAt(rightIndex, index)
                 bubbleDown(at: rightIndex)
