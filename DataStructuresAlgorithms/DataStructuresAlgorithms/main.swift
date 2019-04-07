@@ -59,6 +59,45 @@ func testPop() {
     print("\(heap)\n\n")
 }
 
+// test .insert
+public struct Person: Equatable, Comparable {
+    let name: String
+    let age: Int
+    let isMilitary: Bool
+
+    public static func < (lhs: Person, rhs: Person) -> Bool {
+        if lhs.isMilitary && !rhs.isMilitary {
+            return false
+        }
+        else if !lhs.isMilitary && rhs.isMilitary {
+            return true
+        }
+
+        return lhs.age < rhs.age
+    }
+}
+
+let charles = Person(name: "5", age: 75, isMilitary: true)
+let danielle = Person(name: "4", age: 28, isMilitary: true)
+let bob = Person(name: "3", age: 27, isMilitary: true)
+let erick = Person(name: "2", age: 78, isMilitary: false)
+let amy = Person(name: "1", age: 12, isMilitary: false)
+
+let people = [amy, bob, charles, danielle, erick]
+var peopleHeap = Heap(with: people)
+
+let expectedSortedPeople = [amy, erick, bob, danielle, charles]
+var heapSortedPeople: [Person] = []
+
+print(peopleHeap)
+print("\n\n")
+
+for _ in 0..<peopleHeap.count {
+    heapSortedPeople.append(peopleHeap.pop()!)
+    print(peopleHeap)
+    print("\n\n")
+}
+assert(expectedSortedPeople == heapSortedPeople)
 
 
 // MARK: - Algorithms
@@ -73,4 +112,3 @@ assert(findNthSmallestResult == 10)
 let array = [10, 30, 15, 40, 52, 100, 41, 42, 51]
 let isArrayAHeapResult = Heap.isMinHeap(array: array)
 assert(isArrayAHeapResult == true)
-

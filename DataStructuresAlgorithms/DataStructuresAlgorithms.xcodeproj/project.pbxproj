@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CA5CE7922592A8D00E0F471 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA5CE7822592A8D00E0F471 /* main.swift */; };
 		2CD5A8DB2259B66100BC64E5 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5A8DA2259B66100BC64E5 /* Heap.swift */; };
+		D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		2CA5CE7522592A8D00E0F471 /* DataStructuresAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructuresAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA5CE7822592A8D00E0F471 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2CD5A8DA2259B66100BC64E5 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapAlgorithms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +70,18 @@
 			isa = PBXGroup;
 			children = (
 				2C4E58CC2259B5F70055F8A0 /* Data Structures */,
+				D39D20AF225A6058002E4E51 /* Algorithms */,
 				2CA5CE7822592A8D00E0F471 /* main.swift */,
 			);
 			path = DataStructuresAlgorithms;
+			sourceTree = "<group>";
+		};
+		D39D20AF225A6058002E4E51 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */,
+			);
+			path = Algorithms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */,
 				2CA5CE7922592A8D00E0F471 /* main.swift in Sources */,
 				2CD5A8DB2259B66100BC64E5 /* Heap.swift in Sources */,
 			);

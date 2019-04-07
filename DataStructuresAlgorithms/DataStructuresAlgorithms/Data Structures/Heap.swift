@@ -94,14 +94,16 @@ struct Heap<T: Comparable> {
         func bubbleDown(at index: Int) {
             // Return if there's no left (No right if there's no left)
             guard let leftIndex = leftChildIndex(for: index) else { return }
-            
+
             if let rightIndex = rightChildIndex(for: index),
                 elements[rightIndex] < elements[leftIndex] {
-                
+                // swap right
+                guard elements[index] > elements[rightIndex] else { return }
                 elements.swapAt(rightIndex, index)
                 bubbleDown(at: rightIndex)
-                
             } else {
+                // swap left
+                guard elements[index] > elements[leftIndex] else { return }
                 elements.swapAt(leftIndex, index)
                 bubbleDown(at: leftIndex)
             }
