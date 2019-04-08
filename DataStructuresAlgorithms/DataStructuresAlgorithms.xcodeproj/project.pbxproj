@@ -10,6 +10,7 @@
 		2CA5CE7922592A8D00E0F471 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA5CE7822592A8D00E0F471 /* main.swift */; };
 		2CD5A8DB2259B66100BC64E5 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5A8DA2259B66100BC64E5 /* Heap.swift */; };
 		D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */; };
+		D39D20B4225A8B6B002E4E51 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B3225A8B6B002E4E51 /* MergeSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		2CA5CE7822592A8D00E0F471 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2CD5A8DA2259B66100BC64E5 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapAlgorithms.swift; sourceTree = "<group>"; };
+		D39D20B3225A8B6B002E4E51 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,18 @@
 		D39D20AF225A6058002E4E51 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				D39D20B2225A8B5D002E4E51 /* Sorting */,
 				D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */,
 			);
 			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		D39D20B2225A8B5D002E4E51 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				D39D20B3225A8B6B002E4E51 /* MergeSort.swift */,
+			);
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */,
 				2CA5CE7922592A8D00E0F471 /* main.swift in Sources */,
+				D39D20B4225A8B6B002E4E51 /* MergeSort.swift in Sources */,
 				2CD5A8DB2259B66100BC64E5 /* Heap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

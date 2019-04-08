@@ -112,3 +112,10 @@ assert(findNthSmallestResult == 10)
 let array = [10, 30, 15, 40, 52, 100, 41, 42, 51]
 let isArrayAHeapResult = Heap.isMinHeap(array: array)
 assert(isArrayAHeapResult == true)
+
+
+// test merge sort
+
+var testMergeSortValues = [3, 5, 2, 1, 7, 8, 0]
+print(mergeSort(array: &testMergeSortValues))
+
