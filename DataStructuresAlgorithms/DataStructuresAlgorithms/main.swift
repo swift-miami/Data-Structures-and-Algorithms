@@ -119,3 +119,14 @@ assert(isArrayAHeapResult == true)
 var testMergeSortValues = [3, 5, 2, 1, 7, 8, 0]
 print(mergeSort(array: &testMergeSortValues))
 
+
+// test binary search tree
+
+let bst = BinaryTree<Int>(root: 3)
+bst.insert(value: 1)
+bst.insert(value: 4)
+bst.insert(value: 0)
+bst.insert(value: 2)
+bst.insert(value: 5)
+
+bst.remove(value: 3)

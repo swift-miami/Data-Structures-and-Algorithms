@@ -11,6 +11,7 @@
 		2CD5A8DB2259B66100BC64E5 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5A8DA2259B66100BC64E5 /* Heap.swift */; };
 		D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */; };
 		D39D20B4225A8B6B002E4E51 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B3225A8B6B002E4E51 /* MergeSort.swift */; };
+		D39D20B6225BC5AF002E4E51 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D20B5225BC5AF002E4E51 /* Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		2CD5A8DA2259B66100BC64E5 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		D39D20B0225A606F002E4E51 /* HeapAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapAlgorithms.swift; sourceTree = "<group>"; };
 		D39D20B3225A8B6B002E4E51 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		D39D20B5225BC5AF002E4E51 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				2CD5A8DA2259B66100BC64E5 /* Heap.swift */,
+				D39D20B5225BC5AF002E4E51 /* Tree.swift */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39D20B6225BC5AF002E4E51 /* Tree.swift in Sources */,
 				D39D20B1225A606F002E4E51 /* HeapAlgorithms.swift in Sources */,
 				2CA5CE7922592A8D00E0F471 /* main.swift in Sources */,
 				D39D20B4225A8B6B002E4E51 /* MergeSort.swift in Sources */,
